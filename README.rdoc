@@ -1,25 +1,29 @@
 == Quizler
 ----------Create Quizler Functionality-----------
-1. Create assosiations between models
+
+1.Create assosiations between models
   A.Quiz -> has_many -> Questions -> has_many -> Choices
   B.Choices -> belongs_to -> Questions -> belongs_to Quiz
-2. Define controllers
+2.Define controllers
   A.Quiz - CRUD
   B.Questions - CRUD
   C.Choices - CRUD
-3. Assign routes
+3.Assign routes
   A.Root page - Quiz Index
   B.Resorces Quiz
      Resorces questions
       Resorces choices
-4. Create partials for Quiz form
-5. Create view 
+4.Create partials for Quiz form
+
+5.Create view 
   A.Quiz Index
   B.Quiz show
   C.Quiz 
-6. Create tests
-8. Verify if it works 
-7. Styling 
+6.Create tests
+
+7.Verify if it works
+
+8.Styling 
 
 ----------Generate Feature's----------
 

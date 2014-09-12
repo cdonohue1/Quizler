@@ -22,6 +22,7 @@
 7. Styling 
 
 ----------Generate Feature's----------
+
 1.Put in Devise
 2.Make results view
 3.Add results functionality

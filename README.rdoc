@@ -9,11 +9,19 @@
   C.Choices - CRUD
 3. Assign routes
   A.Root page - Quiz Index
-  B.Resorces 
-4. Create partials for forms
-5. Create view
+  B.Resorces Quiz
+     Resorces questions
+      Resorces choices
+4. Create partials for Quiz form
+5. Create view 
+  A.Quiz Index
+  B.Quiz show
+  C.Quiz 
 6. Create tests
 8. Verify if it works 
 7. Styling 
 
-----------Generate Feature Users----------
+----------Generate Feature's----------
+1.Put in Devise
+2.Make results view
+3.Add results functionality

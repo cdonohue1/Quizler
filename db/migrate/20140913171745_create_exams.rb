@@ -3,7 +3,7 @@ class CreateExams < ActiveRecord::Migration
     create_table :exams do |t|
       t.string :name
       t.string :descriptions
-
+      t.string :title
       t.timestamps
     end
   end

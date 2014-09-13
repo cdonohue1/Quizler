@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20140913163700) do
-
+ActiveRecord::Schema.define(version: 20140913171745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140913163700) do
   create_table "exams", force: true do |t|
     t.string   "name"
     t.string   "descriptions"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,13 +42,6 @@ ActiveRecord::Schema.define(version: 20140913163700) do
   end
 
   add_index "questions", ["quiz_id"], name: "index_questions_on_quiz_id", using: :btree
-
-  create_table "quizzes", force: true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

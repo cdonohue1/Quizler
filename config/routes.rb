@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-root 'quizes#index'
 
   devise_for :users
   resources :users, :only => [:show]

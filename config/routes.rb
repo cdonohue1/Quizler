@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'quizes#index'
+  root 'exams#index'
 
-  resources :quizes do
+  resources :exams do
     resources :questions do
       resources :choices
     end

@@ -1,5 +1,4 @@
 class ExamsController < ApplicationController
-  before_action :set_exam, only: [:show, :edit, :update, :destroy]
 
   def index
     @exam = Exam.all
@@ -12,10 +11,8 @@ class ExamsController < ApplicationController
   def create
     @exam = Exam.new(exam_params) 
 
-      respond_to do |format|
         @exam.save
         redirect_to @exam, notice: 'Post was successfully created.' 
-      end
   end
 
   def show
@@ -32,11 +29,11 @@ class ExamsController < ApplicationController
   end
 
   private 
-   def exam_params
-      params.require(:exam).permit(:title, :description)
-    end
+   # def exam_params
+   #    params.require(:exam).permit(:title, :description)
+   #  end
     # Never trust parameters from the scary internet, only allow the white list through.
-    def exam_params
-      params[:exam]
-    end
+    # def set_exam
+    #   params[:exam]
+    # end
 end

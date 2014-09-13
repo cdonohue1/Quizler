@@ -1,9 +1,9 @@
 <h1>Quizler</h1>
   <% @exam.each do |exam| %>
-    <h3><%= exam.title %></h3>
-    <p><%= exam.description %></p>
+    <h3><%= exam.name %></h3>
+    <p><%= exam.descriptions %></p>
 
-    <%= link_to 'Add a Comment', new_exam_path(exam.id) %>
+    <%= link_to 'Add Question', new_exam_path(exam.id) %>
     <%= link_to 'Edit post', edit_exam_path(exam.id) %>
     <%= link_to 'Delete Post', exam, method: :delete %>
   <% end %>

@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, :only => [:show]
 
-
   root 'exams#index'
+
 
   resources :exams do
     resources :questions do

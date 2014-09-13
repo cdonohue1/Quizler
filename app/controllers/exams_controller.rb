@@ -10,7 +10,6 @@ class ExamsController < ApplicationController
 
   def create
       @exam = Exam.new(exam_params)
-
         @exam.save
         redirect_to @exam, notice: 'Post was successfully created.' 
   end
@@ -18,8 +17,10 @@ class ExamsController < ApplicationController
   def show
      @exam = Exam.find(params[:id])
   end
+
   def edit
-       @exam = Exam.find(params[:id])
+    
+    @exam = Exam.find(params[:id])
   end
 
   def update
@@ -28,7 +29,9 @@ class ExamsController < ApplicationController
         @exam.update_attributes(exam_params)
         redirect_to exams_path
   end
-    def destroy
+
+  def destroy
+    @exam = Exam.find(params[:id])
     @exam.destroy
   end
 

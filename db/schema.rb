@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140912203125) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "choices", force: true do |t|
     t.string   "choice"
     t.boolean  "correct"
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140912203125) do
     t.datetime "updated_at"
   end
 
-  add_index "choices", ["question_id"], name: "index_choices_on_question_id"
+  add_index "choices", ["question_id"], name: "index_choices_on_question_id", using: :btree
 
   create_table "questions", force: true do |t|
     t.string   "question"
@@ -30,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140912203125) do
     t.datetime "updated_at"
   end
 
-  add_index "questions", ["quiz_id"], name: "index_questions_on_quiz_id"
+  add_index "questions", ["quiz_id"], name: "index_questions_on_quiz_id", using: :btree
 
   create_table "quizzes", force: true do |t|
     t.string   "title"

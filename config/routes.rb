@@ -1,37 +1,39 @@
 Rails.application.routes.draw do
-  get 'choices/create'
 
-  get 'choices/new'
 
-  get 'choices/show'
+  # get 'choices/create'
 
-  get 'choices/update'
+  # get 'choices/new'
 
-  get 'choices/destroy'
+  # get 'choices/show'
 
-  get 'questions/create'
+  # get 'choices/update'
 
-  get 'questions/new'
+  # get 'choices/destroy'
 
-  get 'questions/show'
+  # get 'questions/create'
 
-  get 'questions/edit'
+  # get 'questions/new'
 
-  get 'questions/update'
+  # get 'questions/show'
 
-  get 'questions/destroy'
+  # get 'questions/edit'
 
-  get 'quizes/index'
+  # get 'questions/update'
 
-  get 'quizes/new'
+  # get 'questions/destroy'
 
-  get 'quizes/create'
+  # get 'quizes/index'
 
-  get 'quizes/show'
+  # get 'quizes/new'
 
-  get 'quizes/update'
+  # get 'quizes/create'
 
-  get 'quizes/destroy'
+  # get 'quizes/show'
+
+  # get 'quizes/update'
+
+  # get 'quizes/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

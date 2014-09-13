@@ -9,13 +9,17 @@ class ExamsController < ApplicationController
   end
 
   def create
-    @exam = Exam.new(exam_params) 
+      @exam = Exam.new(params[:exam])
 
         @exam.save
         redirect_to @exam, notice: 'Post was successfully created.' 
   end
 
   def show
+     @exam = Exam.find(params[:id])
+  end
+  def edit
+       @exam = Exam.find(params[:id])
   end
 
   def update

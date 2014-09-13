@@ -1,5 +1,12 @@
 <h1>New exam</h1>
-
+<%= form_for @exam do |f|%>
+  <%= f.label :name%>:
+  <%= f.text_field :name, class: "nametext", rows: "7"%>
+<% end %>
+<%= form_for @exam do |f|%>
+  <%= f.label :descriptions%>:
+  <%= f.text_area :descriptions, class: "destext", rows: "4"%>
+<% end %>
 <%= render 'form' %>
 
 <%= link_to 'Back', exams_path %>

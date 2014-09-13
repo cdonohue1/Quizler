@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
+  root 'quizes#index'
 
+  resources :quizes do
+    resources :questions do
+      resources :choices
+    end
+  end
+  
   # get 'choices/create'
 
   # get 'choices/new'

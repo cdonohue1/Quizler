@@ -9,7 +9,7 @@ class ExamsController < ApplicationController
   end
 
   def create
-      @exam = Exam.new(params[:exam])
+      @exam = Exam.new(exam_params)
 
         @exam.save
         redirect_to @exam, notice: 'Post was successfully created.' 
@@ -33,9 +33,9 @@ class ExamsController < ApplicationController
   end
 
   private 
-   # def exam_params
-   #    params.require(:exam).permit(:title, :description)
-   #  end
+   def exam_params
+      params.require(:exam).permit(:name, :descriptions)
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     # def set_exam
     #   params[:exam]

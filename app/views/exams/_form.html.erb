@@ -11,7 +11,14 @@
     </div>
   <% end %>
 
+  <h1>New exam</h1>
+  <%= f.label :name%>:
+  <%= f.text_field :name, class: "nametext", rows: "7"%>
+
+  <%= f.label :descriptions%>:
+  <%= f.text_area :descriptions, class: "destext", rows: "4"%>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

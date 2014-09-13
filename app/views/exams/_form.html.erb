@@ -21,7 +21,7 @@
   <h1>Make Questions:</h1>
   <h4>WE NEED TO ADD NEW QUESTIONS HERE</h4>
 
-  <% f.fields_for :question do |builder| %>
+  <%= f.fields_for :questions do |builder| %>
   <p>
     <%= builder.label :question, "Question" %><br />
     <%= builder.text_area :question, :rows => 3 %>

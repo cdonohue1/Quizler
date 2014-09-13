@@ -10,25 +10,28 @@
       </ul>
     </div>
   <% end %>
-
-  <h1>New exam</h1>
-  <%= f.label :name%>:
+<div class='large-8 large-centered columns'>
+  <h1>New Quiz</h1>
+  <%= f.label :name%>
   <%= f.text_field :name, class: "nametext", rows: "7"%>
 
-  <%= f.label :descriptions%>:
+  <%= f.label :descriptions%>
   <%= f.text_area :descriptions, class: "destext", rows: "4"%>
 
-  <h1>Make Questions:</h1>
-  
+
+  <h1>Add Questions</h1>
+
+
   <%= f.fields_for :questions do |builder| %>
   <p>
     <%= builder.label :question, "Question" %><br />
     <%= builder.text_area :question, :rows => 3 %>
   </p>
   <% end %>
+</div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'button large-centered small-2 submit' %>
   </div>
 <% end %>
 

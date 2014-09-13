@@ -4,6 +4,9 @@
 <h3>Description:</h3>
 <p><%= @exam.descriptions %></p>
 <h4>Questions:</h4>
+<% @exam.questions.each do |question| %>
+  <h2><%= question.question %></h2>
+<% end %>
 
 
 

@@ -1,12 +1,18 @@
-<h1>Quizler</h1>
+<h2 class='small-1 large-centered columns'>Quizes</h2>
+<div class='small-8 large-centered columns'>
   <% @exam.each do |exam| %>
-    <h3>Name: <%= exam.name %></h3>
+   <ul class="pricing-table">
+    <li class="title titleexam"><h3>Name: <%= exam.name %></h3></li>
     <p>Description: <%= exam.descriptions %></p>
-
-    <%= link_to 'Show', exam_path(exam.id) %>
-    <%= link_to 'Edit', edit_exam_path(exam.id) %>
-    <%= link_to 'Delete Exam', exam, method: :delete %>
+    <div class='exam_options'>
+        <%= link_to 'Show', exam_path(exam.id), class: 'button' %>
+        <%= link_to 'Edit', edit_exam_path(exam.id), class: 'button' %>
+        <%= link_to 'Delete Exam', exam, method: :delete, class: 'button'%>
+    </div>
+   </ul>  
   <% end %>
   <hr>
-
-<%= link_to 'New Exam', new_exam_path %>
+</div>
+<div class='small-1 large-centered columns newexam'>
+<%= link_to 'New Exam', new_exam_path, class: 'button'%>
+</div>

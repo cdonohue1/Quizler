@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140913171745) do
   create_table "exams", force: true do |t|
     t.string   "name"
     t.string   "descriptions"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

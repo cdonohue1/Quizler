@@ -29,19 +29,18 @@ ActiveRecord::Schema.define(version: 20140913171745) do
   create_table "exams", force: true do |t|
     t.string   "name"
     t.string   "descriptions"
-    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "questions", force: true do |t|
     t.string   "question"
-    t.integer  "quiz_id"
+    t.integer  "exam_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "questions", ["quiz_id"], name: "index_questions_on_quiz_id", using: :btree
+  add_index "questions", ["exam_id"], name: "index_questions_on_exam_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

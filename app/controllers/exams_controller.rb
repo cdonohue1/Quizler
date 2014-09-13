@@ -5,7 +5,8 @@ class ExamsController < ApplicationController
   end
 
   def new
-    @exam = Exam.new
+    @exam = Exam.new  
+    3.times { @exam.questions.build }
   end
 
   def create
@@ -38,7 +39,7 @@ class ExamsController < ApplicationController
 
   private 
    def exam_params
-      params.require(:exam).permit(:name, :descriptions)
+      params.require(:exam).permit(:name, :descriptions )
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     # def set_exam

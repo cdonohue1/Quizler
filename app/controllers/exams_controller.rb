@@ -27,12 +27,13 @@ class ExamsController < ApplicationController
       @exam = Exam.find(params[:id])
 
         @exam.update_attributes(exam_params)
-        redirect_to exams_path
+        redirect_to root_path
   end
 
-  def destroy
-    @exam = Exam.find(params[:id])
-    @exam.destroy
+    def destroy
+      @exam = Exam.find(params[:id])
+    @exam.destroy 
+    redirect_to root_path
   end
 
   private 

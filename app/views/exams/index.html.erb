@@ -1,9 +1,9 @@
-<h2 class='small-1 large-centered columns'>Quizes</h2>
-<div class='small-8 large-centered columns'>
+<h2 class='large-1 large-centered columns'>Quizes</h2>
+<div class='large-8 large-centered columns'>
   <% @exam.each do |exam| %>
    <ul class="pricing-table">
     <li class="title titleexam"><h3>Name: <%= exam.name %></h3></li>
-    <p>Description: <%= exam.descriptions %></p>
+    <p>Description: <br> <%= exam.descriptions %></p>
     <div class='exam_options'>
         <%= link_to 'Show', exam_path(exam.id), class: 'button' %>
         <%= link_to 'Edit', edit_exam_path(exam.id), class: 'button' %>
@@ -13,6 +13,6 @@
   <% end %>
   <hr>
 </div>
-<div class='small-1 large-centered columns newexam'>
+<div class='large-1 large-centered'>
 <%= link_to 'New Exam', new_exam_path, class: 'button'%>
 </div>

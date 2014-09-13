@@ -1,12 +1,18 @@
 class QuestionsController < ApplicationController
-  def create
-     @question = Question.new(question_params)
+  # def create
+  #    @question = Question.new(question_params)
    
-    if @question.save
-      redirect_to @question
-    else
-      render 'new'
-    end
+  #   if @question.save
+  #     redirect_to @question
+  #   else
+  #     render 'new'
+  #   end
+  # end
+
+  def create
+    @exam = Exam.find(params[:quiz_id])
+    @question = @exam.questions.create(question_params)
+    #redirect_to post_path(@post)
   end
 
   def new

@@ -1,28 +1,34 @@
-== README
+== Quizler
+----------Create Quizler Functionality-----------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1.Create assosiations between models
+  A.Quiz -> has_many -> Questions -> has_many -> Choices
+  B.Choices -> belongs_to -> Questions -> belongs_to Quiz
+2.Define controllers
+  A.Quiz - CRUD
+  B.Questions - CRUD
+  C.Choices - CRUD
+3.Assign routes
+  A.Root page - Quiz Index
+  B.Resorces Quiz
+     Resorces questions
+      Resorces choices
+4.Create partials for Quiz form
 
-Things you may want to cover:
+5.Create view 
+  A.Quiz Index
+  B.Quiz show
+  C.Quiz 
+6.Create tests
 
-* Ruby version
+7.Verify if it works
 
-* System dependencies
+8.Styling 
 
-* Configuration
+----------Generate Feature's----------
 
-* Database creation
+1.Put in Devise
 
-* Database initialization
+2.Make results view
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+3.Add results functionality

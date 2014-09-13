@@ -5,7 +5,9 @@ root 'quizes#index'
   resources :users, :only => [:show]
 
 
-  resources :quizes do
+  root 'exams#index'
+
+  resources :exams do
     resources :questions do
       resources :choices
     end

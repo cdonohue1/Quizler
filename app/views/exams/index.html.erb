@@ -1,0 +1,10 @@
+<h1>Quizler</h1>
+  <% @exam.each do |exam| %>
+    <h3><%= exam.title %></h3>
+    <p><%= exam.description %></p>
+
+    <%= link_to 'Add a Comment', new_exam_path(exam.id) %>
+    <%= link_to 'Edit post', edit_exam_path(exam.id) %>
+    <%= link_to 'Delete Post', exam, method: :delete %>
+  <% end %>
+<%= link_to 'New Exam', new_exam_path %>

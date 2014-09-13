@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+root 'quizes#index'
 
   devise_for :users
-  root 'quizes#index'
+  resources :users, :only => [:show]
+
 
   resources :quizes do
     resources :questions do

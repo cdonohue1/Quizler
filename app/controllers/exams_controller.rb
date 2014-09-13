@@ -20,7 +20,6 @@ class ExamsController < ApplicationController
   end
 
   def edit
-    
     @exam = Exam.find(params[:id])
   end
 
@@ -39,7 +38,7 @@ class ExamsController < ApplicationController
 
   private 
    def exam_params
-      params.require(:exam).permit(:name, :descriptions )
+      params.require(:exam).permit(:name, :descriptions, questions_attributes: [:question, :exam_id] )
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     # def set_exam

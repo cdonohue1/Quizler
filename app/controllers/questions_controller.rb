@@ -10,8 +10,13 @@ class QuestionsController < ApplicationController
   # end
 
   def create
-    @exam = Exam.find(params[:quiz_id])
+    @exam = Exam.find(params[:exam_id])
     @question = @exam.questions.create(question_params)
+    if@question.save
+      redirect_to exam_path(@exam)
+    else
+      render :new
+    end
     #redirect_to post_path(@post)
   end
 
@@ -20,6 +25,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @question = Question.find(params[:id])
   end
 
   def edit
@@ -27,7 +33,7 @@ class QuestionsController < ApplicationController
   end
 
   def update
-     @question = Question.find(params[:id])
+     @exam = Exam.find(params[:exam_id])
     if @question.update(question_params)
       redirect_to @question
     else
@@ -44,7 +50,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:question)
+    params.require(:question).permit(:question, :exam_id)
   end
 
 end

@@ -1,4 +1,15 @@
 <p id="notice"><%= notice %></p>
+<h1><%= @exam.name %></h1>
+
+<h3>Description:</h3>
+<p><%= @exam.descriptions %></p>
+<h4>Questions:</h4>
+
+
+
+
+
+
 
 <%= link_to 'Edit', edit_exam_path(@exam) %> |
 <%= link_to 'Back', exams_path %>
